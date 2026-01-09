@@ -124,7 +124,7 @@ To execute the Requirements Analyst Agent:
 2. Run the following command:
 
    ```bash
-   python main.py ```
+   python main.py 
 
 
 ### Example: Missing or Invalid Input
