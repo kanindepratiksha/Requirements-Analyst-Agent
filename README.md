@@ -74,9 +74,11 @@ The agent accepts a user story in JSON format.
 
 Example (sample_input.json):
 
+```json
 {
   "user_story": "As a customer, I want to add products to my shopping cart and modify quantities, so that I can purchase multiple items in a single order."
 }
+
 
 ---
 
@@ -107,9 +109,11 @@ The agent validates input before processing.
 
 If the input is missing or invalid, the agent returns:
 
+```json
 {
   "error": "Invalid or missing user story input. Please provide a valid user story text."
 }
+
 
 
 ## Usage Guide
