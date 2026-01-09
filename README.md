@@ -51,7 +51,7 @@ project/
 ├── sample_input.json     # Sample input containing the user story
 ├── sample_output.json    # Generated structured requirements output
 └── README.md             # Project documentation
-
+```
 The user story is read from sample_input.json by main.py.
 agent.py analyzes the user story and extracts structured requirements.
 The generated output is written to sample_output.json.
