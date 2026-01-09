@@ -78,7 +78,7 @@ Example (sample_input.json):
 {
   "user_story": "As a customer, I want to add products to my shopping cart and modify quantities, so that I can purchase multiple items in a single order."
 }
-
+```
 
 ---
 
@@ -114,7 +114,7 @@ If the input is missing or invalid, the agent returns:
   "error": "Invalid or missing user story input. Please provide a valid user story text."
 }
 
-
+```
 
 ## Usage Guide
 
