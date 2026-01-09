@@ -44,9 +44,9 @@ Responsibilities:
 
 ## Architecture Overview
 
+```text
 project/
-│
-├── agent.py              # Core logic for requirement analysis and extraction
+├── agent.py              # Core requirement analysis logic
 ├── main.py               # Entry point to execute the agent
 ├── sample_input.json     # Sample input containing the user story
 ├── sample_output.json    # Generated structured requirements output
