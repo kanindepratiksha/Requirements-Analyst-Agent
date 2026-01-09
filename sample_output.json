@@ -1,0 +1,149 @@
+{
+    "user_story": "As a customer, I want to add products to my shopping cart and modify quantities, so that I can purchase multiple items in a single order.",
+    "functional_requirements": [
+        {
+            "id": "FR001",
+            "description": "User can add products to the shopping cart",
+            "priority": "High",
+            "test_complexity": "Low",
+            "category": "Core Functionality",
+            "testable": true,
+            "source": "Derived from user story"
+        },
+        {
+            "id": "FR002",
+            "description": "User can update product quantities in the cart",
+            "priority": "High",
+            "test_complexity": "Low",
+            "category": "Core Functionality",
+            "testable": true,
+            "source": "Derived from user story"
+        },
+        {
+            "id": "FR003",
+            "description": "User can remove items from the shopping cart",
+            "priority": "High",
+            "test_complexity": "Low",
+            "category": "Core Functionality",
+            "testable": true,
+            "source": "Acceptance Criteria"
+        },
+        {
+            "id": "FR004",
+            "description": "Cart displays total price including applicable taxes",
+            "priority": "High",
+            "test_complexity": "Medium",
+            "category": "Pricing & Calculation",
+            "testable": true,
+            "source": "Acceptance Criteria"
+        },
+        {
+            "id": "FR005",
+            "description": "System restricts maximum quantity of a single product to 10 units",
+            "priority": "High",
+            "test_complexity": "Low",
+            "category": "Business Rules",
+            "testable": true,
+            "source": "Acceptance Criteria"
+        },
+        {
+            "id": "FR006",
+            "description": "System prevents adding out-of-stock products to the cart",
+            "priority": "High",
+            "test_complexity": "Medium",
+            "category": "Validation",
+            "testable": true,
+            "source": "Acceptance Criteria"
+        },
+        {
+            "id": "FR007",
+            "description": "System displays item availability status in the cart",
+            "priority": "Medium",
+            "test_complexity": "Low",
+            "category": "Validation",
+            "testable": true,
+            "source": "Acceptance Criteria"
+        },
+        {
+            "id": "FR008",
+            "description": "User receives confirmation when items are added or removed from the cart",
+            "priority": "Medium",
+            "test_complexity": "Low",
+            "category": "User Feedback",
+            "testable": true,
+            "source": "Acceptance Criteria"
+        },
+        {
+            "id": "FR009",
+            "description": "System validates quantity input to prevent zero or negative values",
+            "priority": "High",
+            "test_complexity": "Medium",
+            "category": "Validation",
+            "testable": true,
+            "source": "Implicit business rule"
+        },
+        {
+            "id": "FR010",
+            "description": "System recalculates cart total dynamically when quantities change",
+            "priority": "Medium",
+            "test_complexity": "Low",
+            "category": "Pricing & Calculation",
+            "testable": true,
+            "source": "Implicit pricing behavior"
+        }
+    ],
+    "non_functional_requirements": [
+        {
+            "id": "NFR001",
+            "description": "Shopping cart data shall persist throughout the active user session without data loss",
+            "type": "Reliability",
+            "measurable": true,
+            "test_complexity": "Medium",
+            "source": "Acceptance Criteria"
+        },
+        {
+            "id": "NFR002",
+            "description": "Cart add, update, and remove operations shall complete within 2 seconds under normal load",
+            "type": "Performance",
+            "measurable": true,
+            "test_complexity": "Medium",
+            "source": "Implicit e-commerce performance expectation"
+        },
+        {
+            "id": "NFR003",
+            "description": "Shopping cart functionality shall not be accessible to unauthenticated users",
+            "type": "Security",
+            "measurable": false,
+            "test_complexity": "High",
+            "source": "Implicit security requirement"
+        }
+    ],
+    "edge_cases": [
+        {
+            "id": "EC001",
+            "description": "User attempts to add more than the allowed quantity",
+            "scenario": "Quantity exceeds limit of 10"
+        },
+        {
+            "id": "EC002",
+            "description": "User attempts to add an out-of-stock product",
+            "scenario": "Inventory count is zero"
+        },
+        {
+            "id": "EC003",
+            "description": "User enters zero or negative quantity",
+            "scenario": "Invalid quantity input"
+        },
+        {
+            "id": "EC004",
+            "description": "User session expires with items in the cart",
+            "scenario": "Session timeout"
+        }
+    ],
+    "gaps_identified": [
+        "User authentication and authorization behavior is not specified",
+        "Tax calculation rules (region, rounding) are not defined",
+        "Error handling behavior for cart failures is unclear",
+        "Cross-session or cross-device cart persistence is not defined"
+    ]
+}
